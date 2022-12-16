@@ -16,30 +16,26 @@ def registerWord():
 
     while wordAddLoop == "Yes" or wordAddLoop == "yes" or wordAddLoop == "y":
         wordNew = input("What is your new favorite/interestring word(s) of the day? ")         
+        wordNew.capitalize()
         wordFile.write(wordNew + "\n")
+        wordList.append(wordNew)
 
         wordDefinitionAmount = int(input("How many definitions does this word have? "))
         
         for x in range(wordDefinitionAmount):
             wordSpeechType = input("noun / pronoun / verb / adjective / adverb / preposition / conjunction / interjection ? ") ### adjective, noun, etc
             wordDefinition = input("Definition of the word? ") ### definitnio of the word
+            wordList.append(wordSpeechType)
+            wordList.append(wordDefinition)
             count += 1
-            wordFile.write(wordSpeechType + "\n")
-            wordFile.write(str(count) + ". " + wordDefinition + "\n")
+            wordFile.write(str(count) + ". " + "(" + wordSpeechType + ") "+ wordDefinition + "\n")
         
-        #while wordDefinitionLoop == "Yes":
-        #    wordDefinitionLoop = input("Is there another definition to the word? (Yes/No) ")
-        #    if wordDefinitionLoop == "Yes":
-        #        wordSpeechTypeMulti = input("Alternative speech type of the word? ")
-        #        wordDefinitionMulti = input("Alternative definition of the word? ")
-        wordFile.write("\n")
         count = 0
+        wordFile.write("\n")
         wordAddLoop = input("Would you like to add another word? (Yes/No) ")
 
     wordFile.close()
-    return [wordNew, wordSpeechType, wordDefinition]
-
-
+    return print(wordList)
 
 def main():
     registerWord()
