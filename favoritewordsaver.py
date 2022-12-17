@@ -23,11 +23,11 @@ def registerWord():
         wordDefinitionAmount = int(input("How many definitions does this word have? "))
         
         for x in range(wordDefinitionAmount):
+            count += 1
             wordSpeechType = input("noun / pronoun / verb / adjective / adverb / preposition / conjunction / interjection ? ") ### adjective, noun, etc
-            wordDefinition = input("Definition of the word? ") ### definitnio of the word
+            wordDefinition = input("Definition" + str(count) + "of the word? ") ### definitnio of the word
             wordList.append(wordSpeechType)
             wordList.append(wordDefinition)
-            count += 1
             wordFile.write(str(count) + ". " + "(" + wordSpeechType + ") "+ wordDefinition + "\n")
         
         count = 0

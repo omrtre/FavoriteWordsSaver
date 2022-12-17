@@ -14,3 +14,6 @@ adverb
 Egomania
 1. (noun)A clinical disease highlighting effect of cartharsis, hypertension, and psychomania.
 
+Boltzmann constant
+1. (noun) The Boltzmann constant (kB) relates temperature to energy. It is an indispensable tool in thermodynamics, the study of heat and its relationship to other types of energy. It’s named for Austrian physicist Ludwig Boltzmann (1844–1906), one of the pioneers of statistical mechanics. Statistical mechanics expands upon classical Newtonian mechanics to describe how the group behavior of large collections of objects emerges from the microscopic properties of each individual object.
+
